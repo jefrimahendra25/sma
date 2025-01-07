@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA Muhammadiyah 4 Songgon</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Navbar tetap di atas saat scroll */
+        .navbar {
+            position: fixed; /* Membuat navbar tetap di posisi tetap */
+            top: 0; /* Posisi di bagian atas */
+            left: 0; /* Posisi di kiri */
+            width: 100%; /* Membuat navbar selebar halaman */
+            z-index: 1000; /* Menjaga navbar tetap di atas konten lainnya */
+        }
+
+        /* Memberikan margin untuk konten agar tidak tertutup navbar */
+        body {
+            padding-top: 70px; /* Sesuaikan dengan tinggi navbar */
+        }
+
+        /* Dropdown tetap muncul di bawah navbar */
+        .navbar-nav .nav-item.dropdown .dropdown-menu {
+            position: absolute;
+            top: 100%; /* Dropdown muncul tepat di bawah item dropdown */
+            left: 0;
+            z-index: 1050; /* Memastikan dropdown muncul di atas konten lainnya */
+        }
+
+        /* CSS untuk warna latar belakang aktif */
+        .navbar-nav .nav-item.active > .nav-link {
+            background-color: #000000; /* Ganti menjadi warna hitam */
+            color: white !important; /* Menjaga warna teks tetap kontras */
+        }
+
+        .navbar-nav .nav-item.dropdown.active > .nav-link {
+            background-color: #000000; /* Ganti warna dropdown saat aktif */
+            color: white !important;
+        }
+
+        .navbar-nav .nav-item.dropdown-menu .dropdown-item.active {
+            background-color: #000000; /* Warna saat item dropdown dipilih */
+            color: white !important;
+        }
+
+        /* Optional: Styling dropdown item saat hover untuk memberikan efek */
+        .navbar-nav .nav-item.dropdown-menu .dropdown-item:hover {
+            background-color: #333333; /* Warna saat hover */
+            color: white !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header dengan Navigasi -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Menambahkan logo pada navbar -->
+                <a class="navbar-brand" href="#">
+                    <img src="images/images.jpeg" alt="Logo" style="height: 40px; width: auto;">
+
+                    SMA MUHAMMADIYAH 4 SONGGON
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">BERANDA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">TENTANG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">BERITA</a>
+                        </li>
+                       
+                        <!-- Dropdown Menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownKontak" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                KONTAK
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownKontak">
+                                <a class="dropdown-item" href="Identitas.html">Identitas Sekolah</a>
+                                <a class="dropdown-item" href="contact.html">Kontak Sekolah</a>
+                                <a class="dropdown-item" href="Data Pelengkap.html">Data Pelengkap</a>
+                                <a class="dropdown-item" href="Data Periodeik.html">Data Periodeik</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFasilitas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                FASILITAS
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownFasilitas">
+                                <a class="dropdown-item" href="kases.html">Laboratorium</a>
+                                <a class="dropdown-item" href="events.html">Perpustakaan</a>
+                                <a class="dropdown-item" href="Olahraga.html">Olahraga</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Konten Halaman -->
+    <section class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Selamat Datang di SMA Muhammadiyah 4 Songgon</h1>
+        </div>
+    </section>
+
+    <!-- Gambar Sekolah -->
+    <section class="image-section text-center py-5">
+        <div class="container">
+            <img src="/Users/fiqihaldiyanto/Downloads/muha.jpg" alt="Foto Sekolah" class="img-fluid" style="max-width: 100%; height: auto;">
+        </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section class="about py-5 bg-light">
+        <div class="container text-center">
+            <h2>Tentang Kami</h2>
+            <p>SMA Muhammadiyah 4 Songgon adalah sekolah yang memiliki visi dan misi untuk menyediakan pendidikan yang berkualitas dan berbasis karakter. Kami berfokus pada perkembangan akademik dan non-akademik siswa untuk mempersiapkan mereka menghadapi masa depan yang lebih baik.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 SMA Muhammadiyah 4 Songgon</p>
+    </footer>
+
+    <!-- Script Bootstrap JS dan jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
